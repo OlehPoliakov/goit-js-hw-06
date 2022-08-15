@@ -20,28 +20,45 @@ const images = [
   },
 ];
 
-const ulgallery = document.querySelector('.gallery')
-ulgallery.style.display = "flex";
-ulgallery.style.flexWrap = 'wrap';
-ulgallery.style.gap = '10px';
-ulgallery.style.listStyleType = "none";
+// const ulgallery = document.querySelector('.gallery')
+// ulgallery.style.display = "flex";
+// ulgallery.style.flexWrap = 'wrap';
+// ulgallery.style.listStyleType = "none";
+// ulgallery.style.gap = '20px';
+// ulgallery.style.justifyContent = 'center';
 
-const itemImg = images.map(element => {
+// const itemImg = images.map(element => {
 
-  const img = document.createElement('img')
-  const li = document.createElement('li')
+//   const img = document.createElement('img')
+//   const li = document.createElement('li')
 
-  li.classList.add('gallery_img')
-  img.src = element.url;
-  img.alt = element.alt;
-  img.width = 320;
-  img.height = 320;
+//   li.classList.add('gallery_img')
+//   img.src = element.url;
+//   img.alt = element.alt;
+//   img.width = 400;
 
-  li.append(img);
+//   li.append(img);
 
-  return li
-});
-ulgallery.append(...itemImg)
+//   return li
+// });
+// ulgallery.append(...itemImg)
 
-console.log(ulgallery)
+// console.log(ulgallery)
 
+// 2 Вариант
+const li = document.querySelector('.gallery')
+
+const itemImg = images
+	.map(image => `<li><img class="picture" src=${image.url} width = '400' alt='${image.alt}'></img></li>`)
+	.join('')
+
+  li.insertAdjacentHTML('beforeend', itemImg)
+    // const img = document.createElement('img')
+  
+const pictures = document.querySelectorAll('.picture')
+
+li.style.display = 'flex';
+li.style.flexWrap = 'wrap'
+li.style.listStyle = 'none'
+li.style.gap = '20px'
+li.style.justifyContent = 'center'

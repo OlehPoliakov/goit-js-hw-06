@@ -5,25 +5,19 @@
 // 5. Вставит все <li> за одну операцию в список ul#ingredients.
 
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
-  
+  'Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'
 ];
 
-const ulIngredients = document.querySelector('#ingredients')
-ulIngredients.append('INGREDIENTS')
+const ulIngredients = document.querySelector('#ingredients');
+ulIngredients.append('INGREDIENTS');
 
 const liIngredients = ingredients.map(element => {
-  const li = document.createElement('li')
-  li.textContent = element
-  li.classList.add('ingredients_item')
-  return li
+  const li = document.createElement('li');
+  li.textContent = element;
+  li.classList.add('ingredients_item');
+  return li;
 });
 
-ulIngredients.append(...liIngredients)
+ulIngredients.append(...liIngredients);
 
-console.log(ulIngredients)
+console.log(ulIngredients);
