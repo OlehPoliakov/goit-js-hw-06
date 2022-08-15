@@ -6,7 +6,7 @@
 const inputRange = document.querySelector('#font-size-control');
 const txt = document.querySelector('#text')
 
-inputRange.addEventListener("change", (event) => {
+inputRange.addEventListener("input", (event) => {
 
     txt.style.fontSize = `${event.currentTarget.value}px`;
 
