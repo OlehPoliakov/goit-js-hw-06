@@ -22,7 +22,7 @@ function onFormSubmit(event) {
         password,
     };
 
-    if (mail === '' || password === '') {
+    if (mail === '' && password === '') {
         alert('Note: All fields must be completed!');
     }
 
