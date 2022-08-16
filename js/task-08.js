@@ -13,20 +13,17 @@ function onFormSubmit(event) {
     event.preventDefault();
 
     const formElements = event.currentTarget.elements;
-
     const mail = formElements.email.value;
     const password = formElements.password.value;
-
-    const formData = {
-        mail,
-        password,
-    };
-
-    if (mail === '' && password === '') {
+    // Проверка на заполнение
+    if (mail === '' || password === '') {
         alert('Note: All fields must be completed!');
+    } else {
+        const formData = {
+            mail,
+            password,
+        };
+        console.log(formData);
     }
-
     event.currentTarget.reset();
-
-    console.log(formData);
 }
