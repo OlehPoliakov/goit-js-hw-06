@@ -53,7 +53,6 @@ const itemImg = images
 	.join('')
 
   li.insertAdjacentHTML('beforeend', itemImg)
-    // const img = document.createElement('img')
   
 const pictures = document.querySelectorAll('.picture')
 
