@@ -31,7 +31,7 @@ btnCreate.addEventListener('click', () => {
   divBoxes.append(...boxesToAdd)
 });
 
-// Удаляем div по клику btnDestroy метод call() 
+// Удаляем div по клику btnDestroy
 btnDestroy.addEventListener('click', () => {
   divBoxes.innerHTML = '';
   total = 30;
