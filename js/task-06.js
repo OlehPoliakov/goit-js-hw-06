@@ -7,16 +7,15 @@
 const validationInput = document.querySelector('#validation-input');
 
 validationInput.addEventListener('blur', event => {
-    if (event.target.value.length == validationInput.getAttribute('data-length')) {
-        validationInput.classList.add('valid');
+    const requiredLength = validationInput.getAttribute('data-length')
+    const inputValueLength = event.target.value.length
 
-        if (validationInput.classList.contains('invalid')) {
-            validationInput.classList.remove('invalid');
-        }
+    if (requiredLength == inputValueLength) {
+        validationInput.classList.add('valid');
+        validationInput.classList.remove('invalid');
+
     } else {
-        if (validationInput.classList.contains('valid')) {
-            validationInput.classList.remove('valid');
-        }
         validationInput.classList.add('invalid');
+        validationInput.classList.remove('valid');
     }
 });
