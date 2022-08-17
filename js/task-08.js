@@ -23,7 +23,7 @@ function onFormSubmit(event) {
             mail,
             password,
         };
+        event.currentTarget.reset();
         console.log(formData);
     }
-    event.currentTarget.reset();
 }
